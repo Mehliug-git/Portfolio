@@ -1,1 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap');
 
+body{
+  color: #112d4e;
+  font-family: 'Roboto';
+  background-color: #040506;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  color: #374c64;
+  font-size: 55px;
+}
+
+h2 {
+  color: #3f72af;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.btnmail {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+b {
+  color: #241681;
+  font-size: 20px;
+}
+
+z {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+li {
+  font-size: 20px;
+}
+
+h1 b {
+  color: #ff577f;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 6px;
+  width: 46%;
+  font-size: 20px;
+  margin-left: 27%;
+  padding: 30px;
+  margin-bottom: 40%;
+}
+
+.propos {
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 6px;
+  width: 700px;
+  font-size: 20px;
+}
+
+.mail{
+  background-color: #040506;
+  border-radius: 4px;
+  padding: 30px;
+  margin: 10px 0px;
+  margin-left: 25%;
+  width: 700px;
+  border: 1px solid  rgba(255, 3, 3, 0.973);
+  margin-bottom: 15%;
+}
+
+
+.card2 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 20px auto;
+  margin-top: 20%;
+  margin-left: 30%;
+  width: 25%; 
+}
+
+.comp {
+  float: right;
+  padding-right: 5%;
+  margin-top: -5%;
+  width: 27%;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.italic-grey{
+  color: grey;
+  font-style: italic;
+}
+
+img{
+   border-radius: 120px;
+   float: right;
+   margin-right: 10px;
+}
+
+.bar {
+  float: right;
+  margin-right: 10px;
+  padding-top: 40px;
+}
+
+c{
+  color:red
+}
+
+.rainbow {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 32px;
+  font-family: monospace;
+  letter-spacing: 5px;
+}
+.rainbow_text_animated {
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 100% 0;
+  }
+}
+
+/* ################################## */
+
+.typewriter h1 {
+
+font-family: monospace;
+overflow: hidden; 
+border-right: .15em solid orange; 
+white-space: nowrap; 
+margin: 0 auto; 
+letter-spacing: .15em; 
+width: 360px;
+animation: 
+  typing 2s steps(16, end),
+  blink-caret .5s, rainbow_animation 6s infinite, step-end infinite;
+
+}
+
+/* effet de saisis */
+@keyframes typing {
+from { width: 0 }
+to { width: 80% }
+}
+
+/* parametre du curseur  */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  height: 75px;
+  position: sticky;
+  background-color: #040506;
+  top: 0px;
+  border-bottom: 1px solid #040506;
+  box-shadow: 0 3px 7px 	#000000;
+}
+
+.navbar a {
+  margin: 0px 10px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.div1 {
+  opacity: 0.5;
+
+}
+.slider {
+	overflow-y: hidden;
+	max-height: 500px; /* approximate max height */
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
