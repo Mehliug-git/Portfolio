@@ -1,10 +1,13 @@
 <div>
 <html id="hero">
  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="slider.js"></script>
   <body>
     <div class="navbar">
     <div>
-<div1 class= "slider">
+<div1 class= "slides">
 
   <a href="#hero" id="logo">Portfolios</a>
 </div>
@@ -28,14 +31,8 @@
     <h1 class="rainbow rainbow_text_animated ">Hi, I'm Guilhem.</h1>
   </div>
 </section>
-
-</div1>
-     
-
-
-
-  
-  <div class="comp" >
+ 
+  <div class="comp slides" >
     <h2>Mes compétences</h2>
     <ul>
       <li><b>Programmation</b>: HTML, CSS, Javascript et des bases en Python.</li>
@@ -49,11 +46,12 @@
 
   </div>
   
-  <div  id="about" class="card2">
+  <div  id="about" class="card2 slides">
 
   
   </div>
   <link rel="stylesheet" href="styleblog.css">
+  <link rel="javasheet" href="slider.js">
 
 
 <div class="propos">
@@ -61,14 +59,14 @@
    <z>Passionné <b>d'informatique </b>depuis tout petit, j'aime apprendre et découvrir de nouvelles choses peux importe le sujet. Je suis quelqu'un de très curieux et qui s'adapte vite à un nouvel environement de travail.</z>
 </div>
 
-<div class="card">
+<div class="card slides">
   <h2>Mon parcours</h2>
   <z>&#127891; <c>2016-2017</c> - Brevet des Colleges mention Bien.</z> <br>
   <z>&#127891; <c>2017-2020</c> - Bac STMG option SIG.</z> <br>
   <z>&#127891; <c>2020-2021</c> - BTS SIO option SISR.</z>
 
   </div>
-    <div id="contact" class="mail">
+    <div id="contact" class="mail slider>
       <h2>  Me contacter</h2> 
           <form action="mailto:guilhemferreira@orange.fr" method="post" enctype="text/plain">
         <z>Nom<z> <br>
@@ -77,7 +75,12 @@
         <input type="text" name="comment" size="75"><br><br>
         <input class="btnmail" type="submit" value="Envoyer">
       </form>
-      
+
+
+      <script>
+        var mySlider = slider('.slides');
+      </script>
+
       </div>
       </body>
   </html>

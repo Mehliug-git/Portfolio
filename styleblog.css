@@ -3,7 +3,9 @@
 body{
   color: #112d4e;
   font-family: 'Roboto';
-  background-color: #040506;
+  /* voir sur google gradien bg */
+  background-image: url('https://www.netted.net/wp-content/uploads/sites/14/2016/10/black_EN.jpg');
+  background-size: contain;
 }
 
 h1, h2, h3 {
@@ -50,6 +52,7 @@ h1 b {
 }
 
 .card {
+  scroll-margin-bottom: 7vh;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 6px;
   width: 46%;
@@ -60,8 +63,9 @@ h1 b {
 }
 
 .propos {
+  scroll-margin-bottom: 7vh;
   margin: 20px auto;
-  padding: 30px;
+  padding: 5px;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 6px;
   width: 700px;
@@ -69,6 +73,7 @@ h1 b {
 }
 
 .mail{
+  scroll-margin-top: 7vh;
   background-color: #040506;
   border-radius: 4px;
   padding: 30px;
@@ -81,6 +86,7 @@ h1 b {
 
 
 .card2 {
+  scroll-margin-top: 7vh;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -93,7 +99,7 @@ h1 b {
 .comp {
   float: left;
   padding-right: 5%;
-  margin-top: -5%;
+  margin-top: -10%;
   width: 27%;
 }
 
