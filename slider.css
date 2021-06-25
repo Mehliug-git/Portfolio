@@ -76,6 +76,7 @@ h3 {
     font-family: 'Poppins',sans-serif;
 }
 
+
 h1 {
     font-size: 55px;
     color: #ffffff;
@@ -83,6 +84,12 @@ h1 {
 
 h2 {
     color: #3f72af;
+}
+
+h4 {
+    color: #3f72af;
+    font-size: 20px;
+    margin-left: 2%;
 }
 
 .btn {
@@ -97,9 +104,15 @@ h2 {
     text-decoration: none;
 }
 
-b {
-    font-size: 20px;
+b, p {
+    font-size: 15px;
     color: #ffffff;
+    margin-left: 9%;
+    text-shadow: 2px 0 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0);
+}
+
+b {
+    margin-left: 0%;
 }
 
 z {
@@ -117,6 +130,8 @@ li {
     padding: 30px;
     border-radius: 6px;
     font-size: 20px;
+    text-shadow: 2px 0 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0);
+
 }
 
 .propos {
@@ -127,6 +142,7 @@ li {
     padding: 5px;
     border-radius: 6px;
     font-size: 20px;
+    text-shadow: 2px 0 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0);
 }
 
 .mail {
@@ -144,12 +160,12 @@ q{
     font-family: Lobster;
     color: rgb(143, 145, 168);
     font-size: 20px;
+    text-shadow: 2px 0 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0);
+
     }
     
 label{
-   text-align: center;
-    
-    
+   text-align: center; 
     }
     
 input{
@@ -162,9 +178,6 @@ textarea{
     }
     
 
-
-
-
 .card2 {
     display: flex;
     align-items: center;
@@ -173,7 +186,6 @@ textarea{
     margin: 20px auto;
     margin-top: 20%;
     margin-left: 30%;
-    scroll-margin-top: 7vh;
 }
 
 .comp {
@@ -181,7 +193,8 @@ textarea{
     width: 27%;
     margin-top: -10%;
     padding-right: 5%;
-	
+    text-shadow: 2px 0 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0);
+    margin-left: 1%;
 }
 
 .text-center {
@@ -239,14 +252,14 @@ c {
 /* ################################## */
 
 .typewriter h1 {
-    width: 360px;
+    width: 400px;
     margin: 0 auto;
     border-right: .15em solid orange;
     overflow: hidden;
     font-family: monospace;
-    letter-spacing: .15em;
+    letter-spacing: 2px;
     white-space: nowrap;
-    animation: typing 2s steps(16,end), blink-caret .5s,rainbow_animation 6s infinite,step-end infinite;
+    animation: typing 2.5s steps(18,end), blink-caret .5s,rainbow_animation 5s infinite,step-end infinite;
 }
 
 /* effet
@@ -258,7 +271,7 @@ de saisis */
     }
 
     to {
-        width: 80%;
+        width: 100%;
     }
 }
 
