@@ -164,4 +164,4 @@ var slider = function (sliderElement) {
     return {
         gotoSlide: gotoSlide
     }
-};
+}
