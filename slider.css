@@ -2,6 +2,7 @@ body,
 html {
     width: auto;
     height: auto;
+    cursor: cell;
 }
 
 body.slider__body {
@@ -56,17 +57,17 @@ body.slider__body {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 html {
 /* voir sur google retro landscape
 bg */
 
     font-family: 'Roboto';
     color: #878a8d;
-    background-image: url('https://i.pinimg.com/originals/01/38/11/013811d63121a093c32714cbbeeea0d0.gif');
+    background-image: url('https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif');
     background-position: center center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100%;
 	background-attachment: fixed;
 }
 
@@ -113,6 +114,7 @@ b, p {
 
 b {
     margin-left: 0%;
+    font-size: 20px;
 }
 
 z {
@@ -300,19 +302,29 @@ html {
     justify-content: space-between;
     height: 75px;
     padding: 0 50px;
-    border-bottom: 1px solid #040506;
-    background-color: #040506;
-    box-shadow: 0 3px 7px #000;
+    background-color: #212529;
 }
 
 .navbar a {
     margin: 0 10px;
     padding: 12px;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Bebas Neue';
     font-size: 25px;
     color: #fff;
     cursor: pointer;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 1s;
 }
+.navbar a:hover{
+    background-color: rgb(8, 120, 247);
+    border-radius: 10px;
+    font-size: 35px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 
 .div1 {
     opacity: 0.5;
