@@ -77,6 +77,10 @@ h3 {
     font-family: 'Poppins',sans-serif;
 }
 
+p3 {
+    margin-left: 25%; 
+}
+
 
 h1 {
     font-size: 55px;
@@ -184,7 +188,7 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 32%;
     margin: 20px auto;
     margin-top: 20%;
     margin-left: 30%;
@@ -229,12 +233,11 @@ c {
     text-decoration: underline;
     font-family: monospace;
     font-size: 32px;
-    letter-spacing: 5px;
 }
 
 .rainbow_text_animated {
     color: transparent;
-    background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #66f);
+    background: linear-gradient(to right, #ff0000, #ff4800, #f3722c, #e5ff00, #5eff49, #00ccff, #8400ff);
     background-size: 400% 100%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -254,12 +257,11 @@ c {
 /* ################################## */
 
 .typewriter h1 {
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
-    border-right: .15em solid orange;
+    border-right: .17em solid orange;
     overflow: hidden;
     font-family: monospace;
-    letter-spacing: 2px;
     white-space: nowrap;
     animation: typing 2.5s steps(18,end), blink-caret .5s,rainbow_animation 5s infinite,step-end infinite;
 }
@@ -317,11 +319,11 @@ html {
     transition-duration: 1s;
 }
 .navbar a:hover{
+    cursor: pointer;
     background-color: rgb(8, 120, 247);
     border-radius: 10px;
     font-size: 35px;
     text-decoration: none;
-    cursor: pointer;
 }
 
 
