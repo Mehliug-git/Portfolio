@@ -1,102 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
+  <meta charset="UTF-8">
   <title>Portfolio</title>
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/utils/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css'><link rel="stylesheet" href="./style.css">
+
 </head>
-
-
 <body>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="slider.js"></script>
-  <link rel="stylesheet" href="slider.css">
-  <div class="slides">
 
-
-    <section id="hero" class="slider__page" data-slider-index="1">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="slider.js"></script>
-
-      <div class="navbar">
-        <div>
-          <a href="#hero" id="logo">Portfolio</a>
-        </div>
-        <div id="navright">
-          <a class="float-shadow" href="https://github.com/guilhemguilhem/guilhemguilhem">Code de la page</a> <a href="https://codepen.io/Bakar69/details/YzGdPgO">Mes Projets</a> <a href="#mail">Contact</a>
-        </div>
-      </div>
-
-      <div class="bar">
-        <img height="100" width="100" src="data:image/png;base64,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" alt="5tTgAAAABJRU5ErkJggg==">
-        <p><b>Bienvenue sur mon Portfolio !</b></p>
-        <p class="italic-grey">“Le seul endroit où le succès précède le travail est dans le dictionnaire.” Vidal Sassoon</p><!-- <a href="file:///C:/Program%20Files/PuTTY/GIT/guilhemguilhem/index.html">Voir mes projets</a> -->
-      </div>
-
-
-      <section>
-        <div class="text-center typewriter card2">
-          <h1 class="rainbow rainbow_text_animated">Hi, I'm Guilhem</h1>
-        </div>
-      </section>
-    </section>
-
-
-    <section id="#about" class="slider__page" data-slider-index="2">
-      <img class="html_logo" src="https://img.icons8.com/nolan/64/html-5.png"/>
-      <div class="propos">
-        <img style="margin-left: -18%;" class="propos_logo" src="https://img.icons8.com/nolan/64/info.png"/>
-        <h2 style="margin-right: 1%;">A propos de moi</h2>Passionné <b>d'informatique</b> depuis tout petit, j'aime apprendre et découvrir de nouvelles choses peux importe le sujet. Je suis quelqu'un de très curieux et qui s'adapte vite à un nouvel environement de travail. <br> La majeure partie de mes compétences vienent de mon apprentissage en auto-didacte.
-      </div>
-
-      <section id="compétences">
-        <div class="comp">
-           <h2 style="margin-left: 10%;">Mes compétences</h2>
-          <ul> 
-            <li><b>Programmation</b>: HTML, CSS, Javascript et des bases en Python & en SQL.</li>
-            <li><b>Compétences réseaux</b>: Active directory, Pentesting, Création de structures informatiques.</li>
-            <li><b>Compétences Informatiques</b>: Configuration et installation d'OS, de poste et de logiciels informatiques, Réparations de PC (matérielle ou logiciel) .</li>
-          </ul>
-        </div>
-      </section>
-
-
-      <section>
-        <div class="parcours">
-          <img class="parcours_logo" src="https://img.icons8.com/nolan/64/engineer.png"/>
-          <div style="margin-left: -10%;">
-          <h2 style="margin-left: 17%;">Mon parcours</h2>
-          🎓 <b>2016-2017 -</b> Brevet des Colleges mention Bien.<br>
-          🎓 <b>2017-2020 - </b>Bac STMG Mention Asser Bien, option SIG.<br>
-          🎓 <b>2020-2021 - </b>BTS SIO option SISR, en alternance dans l'entreprise Groupe-Lepine.
-          </div>
-        </div>
-      </section>
-    </section>
-
-      <section id="mail" class="slider__page" data-slider-index="3">
-          <div style="margin-top:15%; margin-left: 41%;" action="mailto:guilhemferreira@orange.fr" method="post" enctype="text/plain">
-            <label for="user" class="text_mail">Nom :</label><br>
-            <input type="text" id="user"><br>
-            <label for="emailaddress" class="text_mail">Email :</label><br>
-            <input type="text" id="emailaddress"><br>
-            <label for="comments" class="text_mail">Message :</label><br>
-            <textarea id="comments" rows="5" cols="25"></textarea>
-            <div>
-              <br>
-              <input type="submit" value="Envoyer" style="margin-right: 80px;"> <input type="reset" value="Reset">
-          </div>
-        </div>
-      </section>
-    
-
-
+<div class="w-100 vh-100 relative" id="desktop">
+  <nav class="absolute top-0 left-0 right-0 flex items-center pv2 ph4">
+    <img class="logo mr4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAACPklEQVR4nO3dYU4CMRCG4anX0HgeCffgTp7E+7jcY/whiQm2QJd2v+n2fX6KId39cDsMs2gGAMAg3P3o7mf/s7j7Qb2uaVxO+LVv9brWSuoF1HJ3z/08pTTcsZiZvagXMDsCECMAsbABZKodL13/L79/bYjqKOzG5e6Lmb09+TRLSum9xXp6iRxA8dVeI3p1FPYSNAsCECMAMQIQIwAxAhAjADECECMAMXkAtT2fFc8fukckf5veqOdTK0yPKEIAzV7tNaL0iOSXoNkRgBgBiP27Drr70cw+zex1++Xs0tnMTimlr9yDuQAUVcneFauuXACSqmTvSlUXe4AYAYgRgBgBiBGAGAGIEYBYLoDz5qvYv6X0QC6AkxFCS4v9ntOsh3vivEN+TO3nDOwBYgQgRgBiNQGwMd9XrHZKagKgOrrtZrVT8vRkwKzVUaupCvYAMQIQIwCxFgHMuDFXVzslLQKYrTpaVe2UdJuP3Et11HuGlD1AjADECECMAMQIQOzpAHrf46XW+x6zFs24Gaepm91jRjd0JbqhO0EAYgQgRgBiBCBGAGIEIEYAYgQg9nAAUXo+qWDrdbTqEdWMp4fo+ZROdpCWSHWPaLj7A4IHwP0BoxktgFvzOEOOxowUwL15nCHnk+R7gOq726Icz0h/AbtEAGIEIKYOoNmU8QohNmxlAE2njFcIUTV1q4KifDPts3oft/oSND0CECMAsV53yiurm9ZiHLe7Hzz/36yvfbv7R7eFbGzW4wYAAADQzw+LaLgPHwZorQAAAABJRU5ErkJggg==">
+    <a class="white link no-underline f7 mr4 b" href="#">{{activeWindowTitle}}</a>
+    <a class="white link no-underline f7 mr4" href="https://github.com/guilhemguilhem/guilhemguilhem">Code</a>
+    <a class="white link no-underline f7 mr4" href="#">Contact (EN COURS)</a>
+  </nav>
+  <div class="restrictor absolute right-2 bottom-2 left-2">
+    <transition-group name="fade">
+      <draggable-window :id="window.id" v-if="window.isShowing" v-for="(window, $index) in windows" :key="$index" :content="window.comp" :title="window.title" :index="window.id">
+        {{ window.content }}
+      </draggable-window>
+    </transition-group>
   </div>
-  <script>
-      var mySlider = slider('.slides');
-  </script>
+  <div class="absolute top-0 right-0 bottom-0 h-100 flex flex-column pa4">
+    <div class="flex items-center pv3">
+      <button class="flex-auto bn bg-transparent" @click="openWindow('propos')">
+        <figure class="mt0 mh0 mb3 w3 h3 db center icon me"></figure>
+        <h4 class="ma0">Moi</h4>
+      </button>
+    </div>
+    <br>
+    <div class="flex items-center pv3">
+      <button class="flex-auto bn bg-transparent" @click="openWindow('comp')">
+        <figure class="mt0 mh0 mb3 w3 h3 db center icon home"></figure>
+        <h4 class="ma0">Compétences</h4>
+      </button>
+    </div>
+    <br>
+    <div class="flex items-center pv3">
+      <button class="flex-auto bn bg-transparent" @click="openWindow('parcours')">
+        <figure class="mt0 mh0 mb3 w3 h3 db center icon writing"></figure>
+        <h4 class="ma0">Parcours</h4>
+      </button>
+    </div>
+    <br>
+    <div class="flex items-center pv3">
+      <button class="flex-auto bn bg-transparent" @click="openWindow('pentest')">
+        <figure class="mt0 mh0 mb3 w3 h3 db center icon calendar"></figure>
+        <h4 class="ma0">Pentesting</h4>
+      </button>
+    </div>
+<br>
+  </div>
+  <div class="flex items-center pv4 flex-column pa4 absolute" >
+    <button class="flex-auto bn bg-transparent" @click="openWindow('disclaimer')">
+      <figure class="mt0 mh0 mb3 w3 h3 db center icon disclaimer"></figure>
+      <h4 class="ma0">Disclaimer</h4>
+    </button>
+  </div>
+</div>
+
+<script type="x/template" id="draggable-window">
+	<div :id="id" class="window absolute bg-white ba bw2 b--black">
+    <div class="bb b--black bw2 flex items-center pa1">
+      <button @click="closeWindow" class="bg-transparent bn dim flex items-center">
+				<!-- Bauhaus FTW -->
+      	<i class="material-icons mr1 f5">change_history</i>
+        <i class="material-icons mr1 f5">crop_square</i>
+        <i class="material-icons f6">radio_button_unchecked</i>
+      </button>
+    </div>
+    <div class="pa3">
+    	<div :is="content"></div>
+    </div>
+  </div>
+</script>
+
+<script type="text/x-template" id="propos-template">
+	<div class="measure">
+  	<p class="mt0">Je suis Guilhem FERREIRA</span></p>
+    <p> Passionné d'informatique depuis tout petit, j'aime apprendre et découvrir de nouvelles choses peux importe le sujet. Je suis quelqu'un de très curieux et qui s'adapte vite à un nouvel environement de travail.
+      La majeure partie de mes compétences vienent de mon apprentissage en auto-didacte. </p>
+    <p>Voici le lien de mon ancien <a class="dark-pink link no-underline" href="https://guilhemguilhem.github.io/Portfolio/index.html" target="_blank">Portfolio</a></p>
+</script>
+
+<script type="text/x-template" id="comp-template">
+	<div class="measure">
+  	<p class="mt0">Programmation: HTML, CSS, Javascript ainsi que des bases en Python & en SQL. <br> <br>
+      Compétences réseaux: Active directory, Pentesting, Création de structures informatiques. <br> <br>
+      Compétences Informatiques: Configuration et installation d'OS, de poste et de logiciels informatiques, Réparations de PC (matérielle ou logiciel).</p>
+  </div>
+</script>
+<script type="text/x-template" id="parcours-template">
+	<div class="measure">
+  	<p class="mt0">🎓 2016-2017 - Brevet des Colleges mention Bien.<br> <br>
+      🎓 2017-2020 - Bac STMG Mention Asser Bien, option SIG. <br> <br>
+      🎓 2020-2021 - BTS SIO option SISR, en alternance dans l'entreprise Groupe-Lepine.</p>
+  </div>
+</script>
+<script type="text/x-template" id="pentest-template">
+	<div class="measure">
+  	<p class="mt0">LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM LOREM IPSUMLOREM IPSUM.</p>
+    <p class="mt0">LOREM IPSUM LOREM IPSUM    LOREM IPSUM   LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM </p>
+  </div>
+</script>
+
+<script type="text/x-template" id="disclaimer-template">
+	<div class="measure">
+  	<p class="mt0">DISCAIMER.</p>
+    <p class="mt0">LOREM IPSUM LOREM IPSUM    LOREM IPSUM   LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM </p>
+  </div>
+</script>
+
+<!-- java en plus -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+<script src='https://cdn.rawgit.com/HugoGiraudel/Countdown.js/a88b61fc/countdown.min.js'></script><script  src="./script.js"></script>
+
 </body>
 </html>
