@@ -99,9 +99,7 @@ Vue.component('draggable-window', {
       onPress: function () {
         eventHub.$emit('window-focused', title);
       } });
-
-
-    // LOL, "press"
+      
     triggerMouseEvent(this.$el, 'mousedown');
     triggerMouseEvent(this.$el, 'mouseup');
 
