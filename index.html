@@ -64,6 +64,15 @@
       <h4 class="ma0">Disclaimer</h4>
     </button>
   </div>
+
+  <div class="flex items-center pv5 flex-column pa4 absolute" >
+    <button class="flex-auto bn bg-transparent" @click="openWindow('pdf')">    <!--@click="openWindow('pdf')">-->
+      <figure class="mt0 mh0 mb3 w3 h3 db center icon pdf"></figure>
+      <h4 class="ma0">PDF Compétences</h4>
+    </button>
+  </div>
+</div>
+
 </div>
 
 <script type="x/template" id="draggable-window">
@@ -119,6 +128,14 @@
   	<p class="mt0">Le Pentesting que je pratique est toujours dans un cadre légal, sur des sites spécialisés.</p>
     <p class="mt0">Je tiens à préciser que les projets réalisés et les manipulations effectuées ne sont faites que dans un but éducatif.</p>
     <p> <a class="dark-red">Tout ce qui peux être vus dans mes projets est TOUJOURS dans un cadre légal et a pour but d'enrichir mes compétences dans le domaine.</a> </p>
+  </div>
+</script>
+<!-- PDF Compétences-->
+<script type="text/x-template" id="pdf-template">
+	<div class="measure">
+  	<div class="measure">
+      <iframe class="pdf" src="http://mehliug.rf.gd/Tableau%20de%20comp%c3%a9tences.pdf"></iframe>
+    </div>
   </div>
 </script>
 

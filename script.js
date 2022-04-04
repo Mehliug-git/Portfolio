@@ -21,6 +21,9 @@ let Calendar = {
 
 let Disclaimer = {
   template: '#disclaimer-template' };  
+  
+let pdf = {
+  template: '#pdf-template' };  
 
 
 const triggerMouseEvent = (node, eventType) => {
@@ -61,7 +64,17 @@ const SITE_CONTENT = [{
   isShowing: false,
   comp: Disclaimer },
 
+
+
+{
+  content: 'Im the pdf window',
+  title: 'Pdf',
+  id: 'pdf',
+  isShowing: false,
+  comp: pdf },
+
 ];
+
 
 
 Vue.component('draggable-window', {
