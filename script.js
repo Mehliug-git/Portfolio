@@ -68,7 +68,7 @@ const SITE_CONTENT = [{
 
 {
   content: 'Im the pdf window',
-  title: 'Pdf',
+  title: 'PDF',
   id: 'pdf',
   isShowing: false,
   comp: pdf },
