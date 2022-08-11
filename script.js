@@ -21,11 +21,7 @@ let Calendar = {
 
 let Disclaimer = {
   template: '#disclaimer-template' };  
-  
-let pdf = {
-  template: '#pdf-template' };  
-
-
+ 
 const triggerMouseEvent = (node, eventType) => {
   let clickEvent = document.createEvent('MouseEvents');
   clickEvent.initEvent(eventType, true, true);
@@ -63,15 +59,6 @@ const SITE_CONTENT = [{
   id: 'disclaimer',
   isShowing: false,
   comp: Disclaimer },
-
-
-
-{
-  content: 'Im the pdf window',
-  title: 'PDF',
-  id: 'pdf',
-  isShowing: false,
-  comp: pdf },
 
 ];
 
