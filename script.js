@@ -1,3 +1,11 @@
+//url parameter 
+if (window.location.search.indexOf('track=yes') > -1) {
+    alert('track present');
+} else {
+    alert('track not here');
+}
+
+
 let eventHub = new Vue({
   data: {
     cachedWindow: null } });
