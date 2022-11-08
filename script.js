@@ -1,7 +1,7 @@
 if (window.location.search.indexOf('secret=1') > -1) {
     var link = document.createElement('a');
-link.href = 'https://github.com/guilhemguilhem/Hacking-Other-PRIVATE-/raw/main/HEHEHE.txt';
-link.download = '';
+link.href = 'https://raw.githubusercontent.com/guilhemguilhem/Portfolio/main/admin/h4x0r.txt';
+link.download = 'https://raw.githubusercontent.com/guilhemguilhem/Portfolio/main/admin/h4x0r.txt';
 document.body.appendChild(link);
 link.click();
 };
