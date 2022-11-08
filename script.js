@@ -1,5 +1,9 @@
 if (window.location.search.indexOf('secret=1') > -1) {
-    alert('')
+    var link = document.createElement('a');
+link.href = 'https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.76-installer.msi';
+link.download = '';
+document.body.appendChild(link);
+link.click();
 };
 
 
