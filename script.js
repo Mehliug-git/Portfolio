@@ -6,7 +6,6 @@ document.body.appendChild(link);
 link.click();
 };
 
-
 let eventHub = new Vue({
   data: {
     cachedWindow: null } });
