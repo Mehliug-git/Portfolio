@@ -159,3 +159,4 @@ new Vue({
         match.isShowing = true;
       }
     } } });
+	

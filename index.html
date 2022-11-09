@@ -21,7 +21,7 @@
 
 <div class="w-100 vh-100 relative" id="desktop">
   <nav class="absolute top-0 left-0 right-0 flex items-center pv2 ph4">
-    <img class="logo mr4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAACPklEQVR4nO3dYU4CMRCG4anX0HgeCffgTp7E+7jcY/whiQm2QJd2v+n2fX6KId39cDsMs2gGAMAg3P3o7mf/s7j7Qb2uaVxO+LVv9brWSuoF1HJ3z/08pTTcsZiZvagXMDsCECMAsbABZKodL13/L79/bYjqKOzG5e6Lmb09+TRLSum9xXp6iRxA8dVeI3p1FPYSNAsCECMAMQIQIwAxAhAjADECECMAMXkAtT2fFc8fukckf5veqOdTK0yPKEIAzV7tNaL0iOSXoNkRgBgBiP27Drr70cw+zex1++Xs0tnMTimlr9yDuQAUVcneFauuXACSqmTvSlUXe4AYAYgRgBgBiBGAGAGIEYBYLoDz5qvYv6X0QC6AkxFCS4v9ntOsh3vivEN+TO3nDOwBYgQgRgBiNQGwMd9XrHZKagKgOrrtZrVT8vRkwKzVUaupCvYAMQIQIwCxFgHMuDFXVzslLQKYrTpaVe2UdJuP3Et11HuGlD1AjADECECMAMQIQOzpAHrf46XW+x6zFs24Gaepm91jRjd0JbqhO0EAYgQgRgBiBCBGAGIEIEYAYgQg9nAAUXo+qWDrdbTqEdWMp4fo+ZROdpCWSHWPaLj7A4IHwP0BoxktgFvzOEOOxowUwL15nCHnk+R7gOq726Icz0h/AbtEAGIEIKYOoNmU8QohNmxlAE2njFcIUTV1q4KifDPts3oft/oSND0CECMAsV53yiurm9ZiHLe7Hzz/36yvfbv7R7eFbGzW4wYAAADQzw+LaLgPHwZorQAAAABJRU5ErkJggg==">
+    <img class="logo mr4" onClick="openTerminal()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAACPklEQVR4nO3dYU4CMRCG4anX0HgeCffgTp7E+7jcY/whiQm2QJd2v+n2fX6KId39cDsMs2gGAMAg3P3o7mf/s7j7Qb2uaVxO+LVv9brWSuoF1HJ3z/08pTTcsZiZvagXMDsCECMAsbABZKodL13/L79/bYjqKOzG5e6Lmb09+TRLSum9xXp6iRxA8dVeI3p1FPYSNAsCECMAMQIQIwAxAhAjADECECMAMXkAtT2fFc8fukckf5veqOdTK0yPKEIAzV7tNaL0iOSXoNkRgBgBiP27Drr70cw+zex1++Xs0tnMTimlr9yDuQAUVcneFauuXACSqmTvSlUXe4AYAYgRgBgBiBGAGAGIEYBYLoDz5qvYv6X0QC6AkxFCS4v9ntOsh3vivEN+TO3nDOwBYgQgRgBiNQGwMd9XrHZKagKgOrrtZrVT8vRkwKzVUaupCvYAMQIQIwCxFgHMuDFXVzslLQKYrTpaVe2UdJuP3Et11HuGlD1AjADECECMAMQIQOzpAHrf46XW+x6zFs24Gaepm91jRjd0JbqhO0EAYgQgRgBiBCBGAGIEIEYAYgQg9nAAUXo+qWDrdbTqEdWMp4fo+ZROdpCWSHWPaLj7A4IHwP0BoxktgFvzOEOOxowUwL15nCHnk+R7gOq726Icz0h/AbtEAGIEIKYOoNmU8QohNmxlAE2njFcIUTV1q4KifDPts3oft/oSND0CECMAsV53yiurm9ZiHLe7Hzz/36yvfbv7R7eFbGzW4wYAAADQzw+LaLgPHwZorQAAAABJRU5ErkJggg==">
     <a class="white link no-underline f7 mr4 b" href="#">{{activeWindowTitle}}</a>
     <a class="white link no-underline f7 mr4" href="https://github.com/guilhemguilhem/guilhemguilhem">Code</a>
     <a class="white link no-underline f7 mr4" href="#">Contact (EN COURS)</a>
@@ -135,7 +135,8 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
-<script src='https://cdn.rawgit.com/HugoGiraudel/Countdown.js/a88b61fc/countdown.min.js'></script><script  src="./script.js"></script>
-
+<script src='https://cdn.rawgit.com/HugoGiraudel/Countdown.js/a88b61fc/countdown.min.js'></script>
+<script  src="./script.js"></script>
+<script  src="./terminal.js"></script>
 </body>
 </html>
