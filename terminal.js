@@ -1,45 +1,57 @@
+/*function OpenTerminal() {
+  document.innerHTML = `<div class="terminal_wrapper"><section id="terminal"><nav class="terminal_nav"><div class="terminal_nav__btns"><button class="terminal_nav__btn t-exit">&#10005;</button> <button class="terminal_nav__btn">&#9723;</button> <button class="terminal_nav__btn">&#9472;</button></div><p class="terminal_nav__title">Terminal (You can drag me)</p></nav><section id="terminal_body"><div class="terminal__text">Type anything hit Enter / Type clear to clear screen</div><div class="terminal_main"><div class="terminal_input_left"><span class="user_msg">sandy@root:</span><span class="user_loc">~</span><span class="user_doll">$</span></div><input class="terminal_input"></div></section></section></div>`;
+  createEvent();
+}*/
 
-function createEvent(){
-    k = document.getElementsByClassName("terminal_input")[document.getElementsByClassName("terminal_input").length-1];
-    k.focus();
-    k.addEventListener('keydown', (e) => {
-    if (e.keyCode == 13)
-        if(e.target.value == "clear"){
-            clearTerminal();
-        }else{
-            changeContent(e);
-        }
-    });
+//Je renome la fonction createEvent en createEv car dans le DOM document.createEvent existe déjà
+function createEv() {
+  var k = document.getElementsByClassName("terminal_input")[
+    document.getElementsByClassName("terminal_input").length - 1
+  ];
+  k.focus();
+  k.addEventListener("keydown", (e) => {
+    if (e.keyCode === 13)
+      if (e.target.value === "clear") {
+        clearTerminal();
+      } else {
+        changeContent(e);
+      }
+  });
 }
 
-function clearTerminal(){
-    document.getElementById("terminal_body").innerHTML = ""
-    k=`<div class="terminal__text">Type anything hit Enter / Type clear to clear screen</div>
-            <div class="terminal_main">
-                <div class="terminal_input_left">
-                    <span class="user_msg">sandy@root:</span><span class="user_loc">~</span><span class="user_doll">$</span>
-                </div>
-                <input class="terminal_input" type="text">
-            </div>`
-    document.getElementById("terminal_body").innerHTML = k
-    createEvent();
+function clearTerminal() {
+  var k 
+  document.getElementById("terminal_body").innerHTML = "";
+  k = `<div class="terminal__text">Type anything hit Enter / Type clear to clear screen</div>
+          <div class="terminal_main">
+              <div class="terminal_input_left">
+                  <span class="user_msg">sandy@root:</span><span class="user_loc">~</span><span class="user_doll">$</span>
+              </div>
+              <input class="terminal_input" type="text">
+          </div>`;
+  document.getElementById("terminal_body").innerHTML = k;
+  createEv();
 }
 
-function changeContent(e){
-    e.target.setAttribute("disabled","disabled");
-    var div = document.createElement("DIV");
-    div.className = "terminal__text"
-    div.textContent = "You have entered  "+e.target.value
-    document.getElementById("terminal_body").appendChild(div)
-    var input_div = document.createElement("DIV");
-    input_div.className = "terminal_main"
-    input_div.innerHTML = '<div class="terminal_input_left"><span class="user_msg">sandy@root:</span><span class="user_loc">~</span><span class="user_doll">$</span></div><input class="terminal_input" type="text">'
-    document.getElementById("terminal_body").appendChild(input_div)
-    createEvent()
+function changeContent(e) {
+  e.target.setAttribute("disabled", "disabled");
+  var div = document.createElement("DIV");
+  div.className = "terminal__text";
+  div.textContent = "You have entered  " + e.target.value;
+  document.getElementById("terminal_body").appendChild(div);
+  var input_div = document.createElement("DIV");
+  input_div.className = "terminal_main";
+  input_div.innerHTML =
+    '<div class="terminal_input_left"><span class="user_msg">root@localhost:</span><span class="user_loc">~</span><span class="user_doll">$</span></div><input class="terminal_input" type="text">';
+  document.getElementById("terminal_body").appendChild(input_div);
+  createEv();
 }
 
 function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  var pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
   } else {
@@ -62,8 +74,8 @@ function dragElement(elmnt) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
   }
 
   function closeDragElement() {
@@ -72,17 +84,14 @@ function dragElement(elmnt) {
   }
 }
 
-document.getElementsByClassName("terminal_input")[document.getElementsByClassName("terminal_input").length-1] = function (event) { 
-        var blurEl = this; 
-        setTimeout(function() {
-            blurEl.focus()
-        }, 10);
-    };
-
-
-function openTerminal() {
-    document.getElementById("desktop").innerHTML = '<div class="terminal_wrapper"> <section id="terminal"> <nav class="terminal_nav"> <div class="terminal_nav__btns"> <button class="terminal_nav__btn t-exit">&#10005;</button> <button class="terminal_nav__btn">&#9723;</button> <button class="terminal_nav__btn">&#9472;</button> </div><p class="terminal_nav__title">Terminal (You can drag me)</p></nav> <section id="terminal_body"> <div class="terminal__text">Type anything hit Enter / Type clear to clear screen</div><div class="terminal_main"> <div class="terminal_input_left"> <span class="user_msg">sandy@root:</span><span class="user_loc">~</span><span class="user_doll">$</span> </div><input class="terminal_input" type="text"> </div></section> </section></div>'
+document.getElementsByClassName("terminal_input")[
+  document.getElementsByClassName("terminal_input").length - 1
+].onblur = function (event) {
+  var blurEl = this;
+  setTimeout(function () {
+    blurEl.focus();
+  }, 10);
 };
 
-createEvent();
+createEv();
 dragElement(document.getElementById("terminal"));

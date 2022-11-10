@@ -4,12 +4,12 @@ link.href = 'https://raw.githubusercontent.com/guilhemguilhem/Portfolio/main/adm
 link.download = 'https://raw.githubusercontent.com/guilhemguilhem/Portfolio/main/admin/h4x0r.txt';
 document.body.appendChild(link);
 link.click();
-};
+}
+
 
 let eventHub = new Vue({
   data: {
     cachedWindow: null } });
-
 
 
 let Welcome = {
@@ -160,3 +160,16 @@ new Vue({
       }
     } } });
 	
+	
+	
+//quand ce bout n'est pas là le reste du JS va bien..	
+const targetDiv = document.getElementById("terminal");
+const btn = document.getElementById("click");
+targetDiv.style.display = "none";	
+btn.onclick = function () {
+  if (targetDiv.style.display !== "none") {
+    targetDiv.style.display = "none";
+  } else {
+    targetDiv.style.display = "block";
+  }
+};
