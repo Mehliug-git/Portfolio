@@ -8,28 +8,45 @@ function createEv() {
   var div = document.createElement("DIV");
   div.className = "terminal__text";
   document.getElementById("terminal_body").appendChild(div);
-  
+  focus_term(); //appel du focus après avoir entré une cmd
   var k = document.getElementsByClassName("terminal_input")[
     document.getElementsByClassName("terminal_input").length - 1
   ];
-  k.focus();
   k.addEventListener("keydown", (e) => {
 	  
-    if (e.keyCode === 13)
-      if (e.target.value === "clear") {
-        clearTerminal();
-      } else {
-
-   if (e.target.value === "sudo") {
-		div.textContent = "⠀⠀⠀⠀⠀⠀⠀⢀⡔⠋⢉⠩⡉⠛⠛⠛⠉⣉⣉⠒⠒⡦⣄⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠠⢃⣉⣀⡀⠂⠀⠀⠄⠀⠀⠀⠀⢱⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⡰⠟⣀⢀⣒⠐⠛⡛⠳⢭⠆⠀⠤⡶⠿⠛⠂⠀⢈⠳⡀⠀⠀⠀⠀ ⠀⠀⠀⠀⢸⢈⢘⢠⡶⢬⣉⠉⠀⠀⡤⠄⠀⠀⠣⣄⠐⠚⣍⠁⢘⡇⠀⠀⠀⠀ ⠀⠀⠀⠀⠈⢫⡊⠀⠹⡦⢼⣍⠓⢲⠥⢍⣁⣒⣊⣀⡬⢴⢿⠈⡜⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠹⡄⠀⠘⢾⡉⠙⡿⠶⢤⣷⣤⣧⣤⣷⣾⣿⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠘⠦⡠⢀⠍⡒⠧⢄⣀⣁⣀⣏⣽⣹⠽⠊⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠪⢔⡁⠦⠀⢀⡤⠤⠤⠄⠀⠠⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠲⠤⠤⣀⣀⣀⣀⣀⠔⠁" + "Isn't real shell...";
-		cmdContent(e)
-   } else {
-	  changeContent(e);
-   }
-
-}
+    if (e.keyCode != 13) {
+		return;
+	}
+//Merci Arnaud pour avoir remplacer les elif par des switch 
+//Aussi pour avoir remplacer les div.textContent par des div.innerText ce qui permet de sauter des lignes en \r\n
+	switch (e.target.value) {
+		case "clear":
+			clearTerminal();		
+			break;
+			
+		case "sudo su":
+			div.innerText = "⠀⠀⠀⠀⠀⠀⠀⢀⡔⠋⢉⠩⡉⠛⠛⠛⠉⣉⣉⠒⠒⡦⣄⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠠⢃⣉⣀⡀⠂⠀⠀⠄⠀⠀⠀⠀⢱⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⡰⠟⣀⢀⣒⠐⠛⡛⠳⢭⠆⠀⠤⡶⠿⠛⠂⠀⢈⠳⡀⠀⠀⠀⠀ ⠀⠀⠀⠀⢸⢈⢘⢠⡶⢬⣉⠉⠀⠀⡤⠄⠀⠀⠣⣄⠐⠚⣍⠁⢘⡇⠀⠀⠀⠀ ⠀⠀⠀⠀⠈⢫⡊⠀⠹⡦⢼⣍⠓⢲⠥⢍⣁⣒⣊⣀⡬⢴⢿⠈⡜⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠹⡄⠀⠘⢾⡉⠙⡿⠶⢤⣷⣤⣧⣤⣷⣾⣿⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠘⠦⡠⢀⠍⡒⠧⢄⣀⣁⣀⣏⣽⣹⠽⠊⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠪⢔⡁⠦⠀⢀⡤⠤⠤⠄⠀⠠⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠲⠤⠤⣀⣀⣀⣀⣀⠔⠁\r\nIsn't real a shell...";
+			cmdContent(e)
+			break;
+			
+		case "help":
+			div.innerText = "clear : Fort clear the Terminal\r\nsudo su : nope...\r\nhelp : Print this help page :)";	
+			cmdContent(e);
+			break;
+			
+		default:
+			changeContent(e);
+	}
   });
 }
+
+//pour faire le focus sur le terminal
+function focus_term() {
+	var k = document.getElementsByClassName("terminal_input")[
+    document.getElementsByClassName("terminal_input").length - 1
+  ];
+  k.focus();
+};
 
 
 function cmdContent(e) {
@@ -54,7 +71,7 @@ function clearTerminal() {
   k = `<div class="terminal__text">Type anything hit Enter / Type clear to clear screen</div>
           <div class="terminal_main">
               <div class="terminal_input_left">
-                  <span class="user_msg">sandy@root:</span><span class="user_loc">~</span><span class="user_doll">$</span>
+                  <span class="user_msg">root@localhost:</span><span class="user_loc">~</span><span class="user_doll">$</span>
               </div>
               <input class="terminal_input" type="text">
           </div>`;
@@ -66,7 +83,7 @@ function changeContent(e) {
   e.target.setAttribute("disabled", "disabled");
   var div = document.createElement("DIV");
   div.className = "terminal__text";
-  div.textContent = "You have entered  " + e.target.value;
+  div.textContent = "Nothing for  " + e.target.value;
   document.getElementById("terminal_body").appendChild(div);
   var input_div = document.createElement("DIV");
   input_div.className = "terminal_main";
