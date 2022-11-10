@@ -2,22 +2,51 @@
   document.innerHTML = `<div class="terminal_wrapper"><section id="terminal"><nav class="terminal_nav"><div class="terminal_nav__btns"><button class="terminal_nav__btn t-exit">&#10005;</button> <button class="terminal_nav__btn">&#9723;</button> <button class="terminal_nav__btn">&#9472;</button></div><p class="terminal_nav__title">Terminal (You can drag me)</p></nav><section id="terminal_body"><div class="terminal__text">Type anything hit Enter / Type clear to clear screen</div><div class="terminal_main"><div class="terminal_input_left"><span class="user_msg">sandy@root:</span><span class="user_loc">~</span><span class="user_doll">$</span></div><input class="terminal_input"></div></section></section></div>`;
   createEvent();
 }*/
-
 //Je renome la fonction createEvent en createEv car dans le DOM document.createEvent existe déjà
+
 function createEv() {
+  var div = document.createElement("DIV");
+  div.className = "terminal__text";
+  document.getElementById("terminal_body").appendChild(div);
+  
   var k = document.getElementsByClassName("terminal_input")[
     document.getElementsByClassName("terminal_input").length - 1
   ];
   k.focus();
   k.addEventListener("keydown", (e) => {
+	  
     if (e.keyCode === 13)
       if (e.target.value === "clear") {
         clearTerminal();
       } else {
-        changeContent(e);
-      }
+
+   if (e.target.value === "sudo") {
+		div.textContent = "⠀⠀⠀⠀⠀⠀⠀⢀⡔⠋⢉⠩⡉⠛⠛⠛⠉⣉⣉⠒⠒⡦⣄⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠠⢃⣉⣀⡀⠂⠀⠀⠄⠀⠀⠀⠀⢱⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⡰⠟⣀⢀⣒⠐⠛⡛⠳⢭⠆⠀⠤⡶⠿⠛⠂⠀⢈⠳⡀⠀⠀⠀⠀ ⠀⠀⠀⠀⢸⢈⢘⢠⡶⢬⣉⠉⠀⠀⡤⠄⠀⠀⠣⣄⠐⠚⣍⠁⢘⡇⠀⠀⠀⠀ ⠀⠀⠀⠀⠈⢫⡊⠀⠹⡦⢼⣍⠓⢲⠥⢍⣁⣒⣊⣀⡬⢴⢿⠈⡜⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠹⡄⠀⠘⢾⡉⠙⡿⠶⢤⣷⣤⣧⣤⣷⣾⣿⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠘⠦⡠⢀⠍⡒⠧⢄⣀⣁⣀⣏⣽⣹⠽⠊⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠪⢔⡁⠦⠀⢀⡤⠤⠤⠄⠀⠠⠀⡇⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠲⠤⠤⣀⣀⣀⣀⣀⠔⠁" + "Isn't real shell...";
+		cmdContent(e)
+   } else {
+	  changeContent(e);
+   }
+
+}
   });
 }
+
+
+function cmdContent(e) {
+  e.target.setAttribute("disabled", "disabled");
+  var div = document.createElement("DIV");
+  div.className = "terminal__text";
+  document.getElementById("terminal_body").appendChild(div);
+  var input_div = document.createElement("DIV");
+  input_div.className = "terminal_main";
+  input_div.innerHTML =
+    '<div class="terminal_input_left"><span class="user_msg">root@localhost:</span><span class="user_loc">~</span><span class="user_doll">$</span></div><input class="terminal_input" type="text">';
+  document.getElementById("terminal_body").appendChild(input_div);
+  createEv();
+}
+
+
+
 
 function clearTerminal() {
   var k 
