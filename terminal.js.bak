@@ -1,9 +1,8 @@
 /*
 ===TODO LIST===
 -JS obfuscation : https://github.com/javascript-obfuscator/javascript-obfuscator
--Host le H4X0R.txt sur mon srv web 
-Voir pour changer les info du .git/
-Faire un Notion avant de tout obfusquer 
+-Voir pour changer les info du .git/
+-Faire un Notion avant de tout obfusquer 
 
 
 
@@ -20,12 +19,7 @@ Faire un Notion avant de tout obfusquer
 
 */
 
-/*function OpenTerminal() {
-  document.innerHTML = `<div class="terminal_wrapper"><section id="terminal"><nav class="terminal_nav"><div class="terminal_nav__btns"><button class="terminal_nav__btn t-exit">&#10005;</button> <button class="terminal_nav__btn">&#9723;</button> <button class="terminal_nav__btn">&#9472;</button></div><p class="terminal_nav__title">Terminal (You can drag me)</p></nav><section id="terminal_body"><div class="terminal__text">Type anything hit Enter / Type clear to clear screen</div><div class="terminal_main"><div class="terminal_input_left"><span class="user_msg">sandy@root:</span><span class="user_loc">~</span><span class="user_doll">$</span></div><input class="terminal_input"></div></section></section></div>`;
-  createEvent();
-}*/
 //Je renome la fonction createEvent en createEv car dans le DOM document.createEvent existe déjà
-
 function createEv() {
   var div = document.createElement("DIV");
   div.className = "terminal__text";
@@ -71,6 +65,22 @@ function createEv() {
 		case "whoami":
 			div.innerText = "I Don't Know";	
 			cmdContent(e);
+			break;		
+
+		case "ls":
+			div.innerText = "dont_run_me.sh "+" Really_doesnt_do_it.txt";	
+			cmdContent(e);
+			break;	
+			
+		case "cat Really_doesnt_do_it.txt":
+			div.innerText = "The bash script execute this :\r'while(true) { window.location.reload() }'\r\nThis little script is a fork bomb...\r\n\r\nReally,don't throw it.\r\n\r\n\r\nbut it's funny :)";	
+			cmdContent(e);
+			break;			
+
+		case "./dont_run_me.sh":
+		case "bash dont_run_me.sh":
+			while(true) { window.location.reload() }
+			console.log("Why don’t you listen to me ?")
 			break;			
 			
 		default:
