@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 body {
+  background: linear-gradient(45deg, #57003f 0%,#f57453 100%);
   font-family: 'Ubuntu';
+  margin: 0;
 }
 
 .terminal_wrapper {

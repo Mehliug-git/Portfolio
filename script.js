@@ -1,7 +1,7 @@
 if (window.location.search.indexOf('secret=1') > -1) {
     var link = document.createElement('a');
-link.href = 'https://raw.githubusercontent.com/guilhemguilhem/Portfolio/main/admin/h4x0r.txt';
-link.download = 'https://raw.githubusercontent.com/guilhemguilhem/Portfolio/main/admin/h4x0r.txt';
+link.href = 'https://mehliug.000webhostapp.com/h4x0r.txt';
+link.download = 'https://mehliug.000webhostapp.com/h4x0r.txt';
 document.body.appendChild(link);
 link.click();
 }
@@ -69,8 +69,6 @@ const SITE_CONTENT = [{
   comp: Disclaimer },
 
 ];
-
-
 
 Vue.component('draggable-window', {
   template: '#draggable-window',
@@ -160,9 +158,7 @@ new Vue({
       }
     } } });
 	
-	
-	
-//quand ce bout n'est pas là le reste du JS va bien..	
+//pour display le terminal	
 const targetDiv = document.getElementById("terminal");
 const btn = document.getElementById("click");
 targetDiv.style.display = "none";	

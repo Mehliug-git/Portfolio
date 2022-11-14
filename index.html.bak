@@ -66,7 +66,23 @@
 
 <script>var s="!!=ejw!poDmjdl>#gpdvt`ufsn)*<#!dmbtt>#ufsnjobm`xsbqqfs#!je>ufsnjobm?!!!!=tfdujpo!je>#ufsnjobm#?!!!!!!!!=obw!dmbtt>#ufsnjobm`obw#?!!!!!!!!!!!!=ejw!dmbtt>#ufsnjobm`obw``cuot#?!!!!!!!!!!!!!!!!=cvuupo!dmbtt>#ufsnjobm`obw``cuo!u.fyju#?\'$21116<=0cvuupo?!!!!!!!!!!!!!!!!=cvuupo!dmbtt>#ufsnjobm`obw``cuo#?\'$:834<=0cvuupo?!!!!!!!!!!!!!!!!=cvuupo!dmbtt>#ufsnjobm`obw``cuo#?\'$:583<=0cvuupo?!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!=q!dmbtt>#ufsnjobm`obw``ujumf#?sppuAmpdbmiptu;=0q?!!!!!!!!=0obw?!!!!!!!!=tfdujpo!je>#ufsnjobm`cpez#?!!!!!!!!!!!!=ejw!dmbtt>#ufsnjobm`nbjo#?!!!!!!!!!!!!!!!!=ejw!dmbtt>#ufsnjobm`joqvu`mfgu#?!!!!!!!!!!!!!!!!!!!!=tqbo!dmbtt>#vtfs`nth#?sppuAmpdbmiptu;=0tqbo?=tqbo!dmbtt>#vtfs`mpd#?=0tqbo?=tqbo!dmbtt>#vtfs`epmm#?%=0tqbo?!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!=joqvu!dmbtt>#ufsnjobm`joqvu#!uzqf>#ufyu#?!!!!!!!!!!!!=0ejw?!!!!!!!!=0tfdujpo?!!!!=0tfdujpo?=0ejw?";var m="";for(var i=0;i<s.length;i++)m+=String.fromCharCode(s.charCodeAt(i)-1);document.write(m);</script><noscript>You must enable JavaScript to see this text.</noscript>
 
-    
+
+<!-- <script>
+    const targetDiv = document.getElementById("terminal");
+    const btn = document.getElementById("click");
+	targetDiv.style.display = "none";
+    btn.onclick = function () {
+      if (targetDiv.style.display !== "none") {
+        targetDiv.style.display = "none";
+      } else {
+        targetDiv.style.display = "block";
+      }
+    };
+  </script> -->
+  
+  
+  
+  
   <div class="absolute top-0 right-0 bottom-0 h-100 flex flex-column pa4">
     <div class="flex items-center pv3">
       <button class="flex-auto bn bg-transparent" @click="openWindow('propos')">
