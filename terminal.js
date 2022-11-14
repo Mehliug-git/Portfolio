@@ -1,9 +1,8 @@
 /*
 ===TODO LIST===
 -JS obfuscation : https://github.com/javascript-obfuscator/javascript-obfuscator
--Host le H4X0R.txt sur mon srv web 
-Voir pour changer les info du .git/
-Faire un Notion avant de tout obfusquer 
+-Voir pour changer les info du .git/
+-Faire un Notion avant de tout obfusquer 
 
 
 

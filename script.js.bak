@@ -158,9 +158,7 @@ new Vue({
       }
     } } });
 	
-	
-	
-//quand ce bout n'est pas là le reste du JS va bien..	
+//pour display le terminal	
 const targetDiv = document.getElementById("terminal");
 const btn = document.getElementById("click");
 targetDiv.style.display = "none";	
