@@ -155,7 +155,7 @@ new Vue({
       }
     } } });
 	
-// Fait defiler les couleurs du favicon (l'etoile de l'onglet), comme le logo en haut a gauche
+// colors du favicon come la p'tite étoile 
 const favicon = document.querySelector("link[rel='icon']");
 const faviconCanvas = document.createElement("canvas");
 const faviconCtx = faviconCanvas.getContext("2d");

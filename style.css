@@ -52,7 +52,7 @@ nav {
   transform: scale(1.15);
 }
 
-/* Etoile arc-en-ciel facon Mario : la teinte saute toutes les 0.5s */
+/* Etoile arc-en-ciel tah mario (0.5s) */
 @keyframes logo-rainbow {
   0%    { filter: brightness(0) invert(1) sepia(1) saturate(20) hue-rotate(0deg); }
   12.5% { filter: brightness(0) invert(1) sepia(1) saturate(20) hue-rotate(45deg); }
@@ -85,7 +85,7 @@ nav {
   box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
-/* En-tête de fenêtre + les 3 pastilles facon macOS */
+/* entete fenetre + icones */
 .window .bb {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   background: rgba(246, 247, 249, 0.42);
@@ -101,11 +101,6 @@ nav {
 
 .window .material-icons:nth-child(3) {
   color: #28c840;
-}
-
-.pv4 {
-  margin-left: 79%;
-  margin-top: 1.2%;
 }
 
 .pv5 {
@@ -141,7 +136,7 @@ nav {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Petit soulevement de la tuile quand on survole son bouton */
+/*Ptit soulevement du bouton quand on passe */
 button:hover .icon {
   transform: translateY(-4px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
@@ -183,52 +178,49 @@ button:hover .icon {
   background: rgba(124, 58, 237, 0.28);
 }
 
-/* ---- Version mobile / petit écran ---- */
+/* ---- Version mobile / petit écran ---- [CLAUDE] */
 @media (max-width: 720px) {
+  /* Les catégories deviennent un dock horizontal en bas, toujours au premier plan */
   .h-100.flex-column {
-    top: 3.25rem;
+    top: auto;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: auto;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.75rem;
     padding: 0.75rem;
+    z-index: 30;
+    background: rgba(15, 18, 28, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .h-100.flex-column br {
     display: none;
   }
 
-  /* Le disclaimer se pose en bas au centre (au lieu du décalage à 79%) */
-  .pv4 {
-    top: auto;
-    bottom: 1rem;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 0 1rem;
-  }
-
-  /* La barre du haut et les fenêtres passent devant les icônes */
+  /* La barre du haut reste au-dessus des fenêtres */
   nav {
     z-index: 20;
   }
 
+  /* Les fenêtres s'ouvrent dans la zone du haut, au-dessus du dock */
   .restrictor {
     top: 3rem;
     left: 0.5rem;
     right: 0.5rem;
-    bottom: 0.5rem;
+    bottom: 7rem;
     z-index: 10;
   }
 
   /* Les fenêtres tiennent dans l'écran et défilent si trop longues */
   .window {
     max-width: 92vw;
-    max-height: 78vh;
+    max-height: 68vh;
     overflow-y: auto;
   }
 }
