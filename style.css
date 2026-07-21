@@ -10,7 +10,7 @@ button {
   font-family: "Roboto Mono";
 }
 
-/* Fond du bureau : photo de foret assombrie + halos colorés pour le style */
+/* background bg assombrie + halos coloré */
 #desktop:before {
   content: "";
   position: absolute;
@@ -19,12 +19,8 @@ button {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background:
-    radial-gradient(900px circle at 12% 18%, rgba(34, 211, 238, 0.15), transparent 45%),
-    radial-gradient(1000px circle at 88% 85%, rgba(139, 92, 246, 0.18), transparent 45%),
-    linear-gradient(180deg, rgba(8, 10, 18, 0.5), rgba(8, 10, 18, 0.72)),
-    url("./forest.jpg");
-  background-size: cover;
+  background: url("./forest.jpg");
+  background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -171,7 +167,6 @@ button:hover .icon {
   content: "gavel";
 }
 
-/* Couleurs des surlignements de texte (le orange d'Orange Cyberdefense reste inline) */
 .dark-pink {
   color: #7c3aed;
 }
@@ -190,7 +185,6 @@ button:hover .icon {
 
 /* ---- Version mobile / petit écran ---- */
 @media (max-width: 720px) {
-  /* Les catégories : une rangée de tuiles centrée sous la barre du haut */
   .h-100.flex-column {
     top: 3.25rem;
     left: 0;

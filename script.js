@@ -155,7 +155,28 @@ new Vue({
       }
     } } });
 	
-//pour display le terminal	
+// Fait defiler les couleurs du favicon (l'etoile de l'onglet), comme le logo en haut a gauche
+const favicon = document.querySelector("link[rel='icon']");
+const faviconCanvas = document.createElement("canvas");
+const faviconCtx = faviconCanvas.getContext("2d");
+let faviconHue = 0;
+
+const faviconImg = new Image();
+faviconImg.onload = function () {
+  faviconCanvas.width = faviconImg.width;
+  faviconCanvas.height = faviconImg.height;
+
+  setInterval(function () {
+    faviconCtx.clearRect(0, 0, faviconCanvas.width, faviconCanvas.height);
+    faviconCtx.filter = "brightness(0) invert(1) sepia(1) saturate(20) hue-rotate(" + faviconHue + "deg)";
+    faviconCtx.drawImage(faviconImg, 0, 0);
+    favicon.href = faviconCanvas.toDataURL("image/png");
+    faviconHue = (faviconHue + 45) % 360;
+  }, 300);
+};
+faviconImg.src = favicon.href;
+
+//pour display le terminal
 const targetDiv = document.getElementById("terminal");
 const btn = document.getElementById("click");
 targetDiv.style.display = "none";	
