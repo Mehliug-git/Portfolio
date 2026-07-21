@@ -14,19 +14,19 @@ let eventHub = new Vue({
     cachedWindow: null } });
 
 
-let Welcome = {
+let Propos = {
   template: '#propos-template' };
 
 
-let Home = {
+let Comp = {
   template: '#comp-template' };
 
 
-let Writing = {
+let Parcours = {
   template: '#parcours-template' };
 
 
-let Calendar = {
+let Pentest = {
   template: '#pentest-template' }; 
 
 let Disclaimer = {
@@ -39,32 +39,27 @@ const triggerMouseEvent = (node, eventType) => {
 };
 
 const SITE_CONTENT = [{
-  content: 'Im the welcome window',
   title: 'À propos',
   id: 'propos',
   isShowing: true,
-  comp: Welcome },
+  comp: Propos },
 {
-  content: 'Im the home window',
   title: 'Compétences',
   id: 'comp',
   isShowing: false,
-  comp: Home },
+  comp: Comp },
 {
-  content: 'Im the writing window',
   title: 'Parcours',
   id: 'parcours',
   isShowing: false,
-  comp: Writing },
+  comp: Parcours },
 {
-  content: 'Im the calendar window',
   title: 'Pentest',
   id: 'pentest',
   isShowing: false,
-  comp: Calendar },
+  comp: Pentest },
 
 {
-  content: 'Im the disclaimer window',
   title: 'Disclaimer',
   id: 'disclaimer',
   isShowing: false,
