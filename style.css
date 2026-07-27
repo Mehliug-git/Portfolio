@@ -158,8 +158,8 @@ button:hover .icon {
   content: "security";
 }
 
-.icon.disclaimer::before {
-  content: "gavel";
+.icon.projets::before {
+  content: "folder";
 }
 
 .dark-pink {
@@ -176,6 +176,20 @@ button:hover .icon {
 
 ::selection {
   background: rgba(124, 58, 237, 0.28);
+}
+
+/* Fenêtre Projets : liste sur deux colonnes pour tout voir d'un coup (desktop) */
+@media (min-width: 721px) {
+  #projets .measure {
+    max-width: none;
+    width: 44em;
+    column-count: 2;
+    column-gap: 2.5rem;
+  }
+
+  #projets .measure p {
+    break-inside: avoid;
+  }
 }
 
 /* ---- Version mobile / petit écran ---- [CLAUDE] */

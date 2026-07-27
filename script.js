@@ -29,8 +29,11 @@ let Parcours = {
 let Pentest = {
   template: '#pentest-template' }; 
 
+let Projets = {
+  template: '#projets-template' };
+
 let Disclaimer = {
-  template: '#disclaimer-template' };  
+  template: '#disclaimer-template' };
  
 const triggerMouseEvent = (node, eventType) => {
   let clickEvent = document.createEvent('MouseEvents');
@@ -58,6 +61,12 @@ const SITE_CONTENT = [{
   id: 'pentest',
   isShowing: false,
   comp: Pentest },
+
+{
+  title: 'Projets',
+  id: 'projets',
+  isShowing: false,
+  comp: Projets },
 
 {
   title: 'Disclaimer',
